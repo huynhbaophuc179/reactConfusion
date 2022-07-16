@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {   
+import {
     Button, Modal, ModalBody, ModalHeader, Label, Row, Col
 } from "reactstrap";
 
@@ -11,7 +11,7 @@ const required = (val) => val && val.length; //value > 0
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => (val) && (val.length >= len);
 
-class CommentForm extends Component{
+class CommentForm extends Component {
 
     constructor(props) {
         super(props);
@@ -40,8 +40,8 @@ class CommentForm extends Component{
     }
 
 
-    render(){
-        return(
+    render() {
+        return (
             <React.Fragment>
                 <Button outline onClick={this.toggleCommentFormModal}>
                     <span className="fa fa-comments fa-lg"></span> Submit Comment
@@ -52,9 +52,9 @@ class CommentForm extends Component{
                 <Modal isOpen={this.state.isCommentFormModalOpen} toggle={this.toggleCommentFormModal} >
                     <ModalHeader toggle={this.toggleCommentFormModal}> Submit Comment </ModalHeader>
                     <ModalBody>
-                       
+
                         <LocalForm onSubmit={(values) => this.handleCommentFormSubmit(values)}>
-                          
+
                             {/* rating */}
                             <Row className="form-group">
                                 <Label htmlFor="rating" md={12} >Rating</Label>
@@ -81,7 +81,7 @@ class CommentForm extends Component{
                                         messages={{
                                             required: 'Required',
                                         }}
-                                    />  
+                                    />
                                 </Col>
                             </Row>
 
@@ -106,7 +106,7 @@ class CommentForm extends Component{
                                             minLength: 'Must be greater than 2 characters',
                                             maxLength: 'Must be 15 characters or less'
                                         }}
-                                    />                                    
+                                    />
                                 </Col>
                             </Row>
 
@@ -131,7 +131,7 @@ class CommentForm extends Component{
                                         messages={{
                                             required: 'Required',
                                         }}
-                                    />  
+                                    />
                                 </Col>
 
                             </Row>
