@@ -182,6 +182,7 @@ class Contact extends Component {
                                             validEmail: 'Invalid Email Address'
                                         }}
                                     />
+                                    <
                                 </Col>
                             </Row>
 
