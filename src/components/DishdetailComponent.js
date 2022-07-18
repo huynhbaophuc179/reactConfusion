@@ -8,8 +8,8 @@ import {
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform } from 'react-animation-components';
 
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 /**........................ comment component ends ................................................. */
 //// validators
 const required = (val) => val && val.length; //value > 0
